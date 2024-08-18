@@ -49,7 +49,7 @@
                 <strong>{{ car.mileage }} км</strong>
               </p>
             </div>
-            <div class="col-md-4 col-sm-6">
+            <div class="col- wmd-4 col-sm-6">
               <p>
                 <span>Топливо</span>
                 <br>
@@ -82,4 +82,9 @@
       </div>
     </div>
   </section>
+  {% if sales %}
+    <div class="courses-info">
+			<a href="{% url 'sales' car.id %}" class="section-btn btn btn-primary btn-block">Продажи</a>
+		</div>
+  {% endif %}
 {% endblock content %}
