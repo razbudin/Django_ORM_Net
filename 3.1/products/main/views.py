@@ -29,15 +29,6 @@ class ProductDetailsView(APIView):
             return Response(ser.data)
         except Product.DoesNotExist:
             raise Http404('Product not found')
-        # try:
-        #     prod = Product.objects.get(id=product_id)
-        #     # review = Review.objects.all()
-        #     ser = ProductDetailsSerializer(prod)
-        #     # ser_rev = ReviewSerializer(review)
-        #     # data = {'ser': ser.data, 'ser_rev': ser_rev.data}
-        #     return Response(ser.data)
-        # except Product.DoesNotExist:
-        #     raise Http404()
 
 
 # доп задание:
